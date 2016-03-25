@@ -1,3 +1,12 @@
+#Derive the sentiment of each tweet
+#files need: a tweets document and a sentiment document
+#tweets document: output.txt
+#sentiment document: AFINN-111.txt
+#output.txt is the tweets data retrieved from Twitter API. The data are in JSON format.
+#AFINN-111.txt is a tab-delimited file
+#call from command line: "python term_sentiment.py AFINN-111.txt output.txt"
+#stdout the sentiment score of every tweet, with each line representing one tweet
+
 import sys
 import json
 from re import split as rsplit
