@@ -4,6 +4,8 @@ from re import split as rsplit
 from pprint import pprint
 
 def byteify(input):
+#Reference: Mark Amery
+#http://stackoverflow.com/questions/956867/how-to-get-string-objects-instead-of-unicode-ones-from-json-in-python/13105359#13105359
     if isinstance(input, dict):
         return {byteify(key): byteify(value)
                 for key, value in input.iteritems()}
