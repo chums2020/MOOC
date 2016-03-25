@@ -5,7 +5,6 @@
 
 import sys
 import json
-from re import split as rsplit
 from pprint import pprint
 
 
