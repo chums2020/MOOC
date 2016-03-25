@@ -47,7 +47,7 @@ def hw(sent_file):
   		scores[term] = int(score)  # Convert the score to an integer.
 	#print scores.items() # Print every (term, score) pair in the dictionary 
 	return scores
-
+	
 def hw2(tweet_file, scores):
 	for line in tweet_file:
    		tweet = json.loads(line)
@@ -57,13 +57,16 @@ def hw2(tweet_file, scores):
    			text = tweet['text']
     		tweet_words = split_string(text, splitlist)
     		#pprint(tweet_words)
+    		score = 0
     		for word in tweet_words:
     			if word in scores.keys():
-    				print scores[word]
+    				score = score + scores[word]
+    		print score
+    	else:
+    		print 0			
 
-
-def lines(fp):
-    print str(len(fp.readlines()))
+#def lines(fp):
+#    print str(len(fp.readlines()))
 
 def main():
     sent_file = open(sys.argv[1])
