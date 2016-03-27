@@ -2,9 +2,11 @@
 import urllib
 from BeautifulSoup import *
 
-url = 'http://python-data.dr-chuck.net/known_by_Elaf.html'
+n = 8 #number of layers 
+url = 'http://python-data.dr-chuck.net/known_by_Elaf.html' #seed
 print url
-for i in range(1,8):	
+
+for i in range(1,n): 	
 	html = urllib.urlopen(url).read()
 	soup = BeautifulSoup(html)
 
