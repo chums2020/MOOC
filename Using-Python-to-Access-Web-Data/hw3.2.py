@@ -10,7 +10,7 @@ for i in range(1,n):
 	html = urllib.urlopen(url).read()
 	soup = BeautifulSoup(html)
 
-# Retrieve all of the anchor tags
+# Retrieve anchor tag at position 17
 	tag = soup('a')[17]
 	url = tag['href'].encode('utf-8')
 	print url
