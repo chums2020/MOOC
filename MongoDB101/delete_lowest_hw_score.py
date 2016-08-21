@@ -1,3 +1,4 @@
+# Week 2 CRUD Homework 2.2
 # In the shell, we first import the data file grades.json to the db students, and name the new collection 'grades'
 # mongoimport --drop -d students -c grades grades.json
 # the new collection should have 800 documents 
